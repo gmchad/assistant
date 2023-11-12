@@ -1,4 +1,4 @@
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 from enum import Enum
 from typing import List, Dict, Union, Any, Optional
 from pydantic import BaseModel, Field
@@ -7,6 +7,8 @@ import json
 import os
 
 load_dotenv()
+
+ROOT_ASSISTANT_NAME = "Assistant Inception"
 
 client = OpenAI()
 
@@ -53,7 +55,7 @@ def create_root_assistant():
 
     params = AssistantParams(
       model="gpt-4-1106-preview",
-      name="Assistant Inception",
+      name= ROOT_ASSISTANT_NAME,
       description="An Assistant that creates more Assistant",
       instructions="Your job is to create more OpenAI Assistants. You can use your function calling tool to create assistants. Default to gpt-4-1106-preview as the model if not specified.",
       tools=[Tool(type=ToolType.function, function=assistant_function)],
@@ -84,7 +86,4 @@ def invoke_root_assistant():
     return run
 
 if __name__ == "__main__":
-    run = invoke_root_assistant()
-
-
-     
+    create_root_assistant()
