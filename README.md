@@ -15,7 +15,7 @@ Create OpenAI Assistants and Manage Threads
 
 ## Installation
 ```
-pip install openai pydantic python-dotenv
+pip install -r requirements.txt
 ```
 
 ## Usage
