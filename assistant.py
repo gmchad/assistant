@@ -1,4 +1,3 @@
-from openai import OpenAI
 from enum import Enum
 from typing import List, Dict, Union, Any, Optional
 from pydantic import BaseModel, Field
