@@ -18,6 +18,12 @@ Create OpenAI Assistants and Manage Threads
 pip install -r requirements.txt
 ```
 
+## Quick Start ✨
+create a simple math assistant and perform an addition function call.
+```
+python main.py
+```
+
 ## Usage
 ### Creating Assistants
 see `assistant.py`   
