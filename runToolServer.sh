@@ -1,0 +1,1 @@
+uvicorn toolServer:app --port 8001 --reload

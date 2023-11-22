@@ -1,0 +1,22 @@
+{
+    "name": "input_text",
+    "description": "Use puppyteer to grab an input field and enter text into it",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "url": {
+                "type": "string",
+                "description": "the url where text needs to be inputted"
+            }, 
+            "selector": {
+                "type": "string",
+                "description": "the selector describing which element to enter text into"
+            },
+            "input_text": {
+                "type": "string",
+                "description": "the text to input when using input command"
+            }
+        },
+        "required": ["url","selector","input_text"]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "call_fastapi",
+    "description": "Make an api call to fastapi-pyppeteer",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string",
+                "description": "The api route to call",
+                "enum": ["navigate","screenshot","getLinks"]
+            },
+            "url": {
+                "type": "string",
+                "description": "the url to navigate to or screenshot."
+            }
+        },
+        "required": ["command", "url"]
+    }
+}

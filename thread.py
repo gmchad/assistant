@@ -3,7 +3,6 @@ from typing import List, Dict, Union, Any, Optional
 import json
 import asyncio
 
-
 class Thread:
   def __init__(self, client, assistant_id, functions={}):
     self.assistant_id = assistant_id
@@ -65,6 +64,7 @@ class Thread:
     try:
       self.run = await self.client.beta.threads.runs.retrieve(self.run.id, thread_id=self.thread.id)
       while self.run.status not in ['expired', 'completed', 'failed', 'cancelled']:
+      # while self.run.status not in ['expired', 'failed', 'cancelled']:
         print(f'Current status: {self.run.status}')
         # check for function call
         if self.run.status == "requires_action":
