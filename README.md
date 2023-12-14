@@ -13,6 +13,10 @@ Create OpenAI Assistants and Manage Threads
 	- function call support
 - function to openapi converter
 
+## Assistant API
+![Alt text](/assets/assistant.png)
+
+
 ## Installation
 ```
 pip install -r requirements.txt
